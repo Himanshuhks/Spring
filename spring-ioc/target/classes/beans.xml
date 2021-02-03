@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+    <context:annotation-config/>
+    <context:property-placeholder location="classpath:application.properties"/>
+    <bean id = "airtelNetwork" class="main.java.com.kamal.kishore.spring.ioc.sim.impl.AirtelNetwork">
+        <property name="id" value="1"></property>
+        <property name="name" value="Airtel"></property>
+        <property name="appStores" ref="googlePlayStore"></property>
+        <property name="apps">
+            <bean class="main.java.com.kamal.kishore.spring.ioc.apps.impl.AirtelMoney"></bean>
+        </property>
+    </bean>
+
+    <bean id = "vodafoneNetwork" class="main.java.com.kamal.kishore.spring.ioc.sim.impl.VodafoneNetwork">
+        <constructor-arg name="id" value="2"></constructor-arg>
+        <constructor-arg name="name" value="Vodafone"></constructor-arg>
+        <property name="appStores" ref="googlePlayStore"></property>
+        <property name="apps">
+            <bean class="main.java.com.kamal.kishore.spring.ioc.apps.impl.VodafonePlay"></bean>
+        </property>
+    </bean>
+
+    <bean id = "googlePlayStore" class="main.java.com.kamal.kishore.spring.ioc.appstores.impl.GooglePlayStore"></bean>
+
+    <bean id = "samsungPhone" class ="main.java.com.kamal.kishore.spring.ioc.phone.impl.SamsungPhone">
+    </bean>
+    <bean id = "onePlusPhone" class="main.java.com.kamal.kishore.spring.ioc.phone.impl.OnePlusPhone"></bean>
+</beans>

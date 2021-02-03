@@ -1,0 +1,12 @@
+com/hks/AnnotationWithoutXML/Client.class
+com/hks/componentAnnotation/Client.class
+com/hks/annotations/Student.class
+com/hks/BeanAnnotation/Client.class
+com/hks/BeanAnnotation/CollegeConfig.class
+com/hks/BeanAnnotation/College.class
+com/hks/AnnotationWithoutXML/College.class
+com/hks/AnnotationWithoutXML/CollegeConfig.class
+com/hks/componentAnnotation/College.class
+com/hks/BeanAnnotation/Principal.class
+com/hks/annotations/Client.class
+com/hks/annotations/HomeController.class
